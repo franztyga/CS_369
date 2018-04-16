@@ -1,0 +1,25 @@
+<h1>Edit Student</h1>
+
+<%= form_for @student do |f| %>
+<% if @student.errors.any? %>
+<h2>Errors</h2>
+<ul>
+	<% @student.errors.full_messages.each do |message|%>
+	<li><%= message %></li>
+	<% end %>
+</ul>
+	<% end %>
+	<p>
+		<%= f.label :student_id %> ID<br/>
+		<%= f.text_field :student_id %><br/>
+		<%= f.label :student_name %><br/>
+		<%= f.text_field :student_name %><br/>
+		<%= f.label :student_section %><br/>
+		<%= f.text_field :student_section %>
+	</p>
+	<p>
+		<%= f.submit "Update Student" %>
+	</p>
+
+<p><%= link_to "Back", students_path %></p>
+	<% end %>

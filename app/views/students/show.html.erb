@@ -1,0 +1,8 @@
+<h1><%= @student.student_id %></h1>
+<p><%= @student.student_name %></p>
+<p><%= @student.student_section %></p>
+<p><%= @student.created_at %></p>
+<p><%= link_to "Edit", edit_student_path %> |
+	<%= link_to "Delete", student_path, :data => {:confirm =>'Are you sure?'}, :method => :delete %></p>
+
+<p><%= link_to "Back", students_path %></p>
